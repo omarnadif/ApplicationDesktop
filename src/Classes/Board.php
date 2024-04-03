@@ -14,7 +14,6 @@ class Board
         $this->initializeProperties();
     }
 
-
     private function initializeProperties(): void
     {
         $properties = [
@@ -67,7 +66,6 @@ class Board
         }
     }
 
-
     private function addProperty(IPropertyCards $property): void
     {
         $this->properties[] = $property;
@@ -76,5 +74,20 @@ class Board
     public function getProperties(): array
     {
         return $this->properties;
+    }
+
+
+    public function generateBoard(): array
+    {
+        $board = [];
+        foreach ($this->properties as $property) {
+            $board[] = [
+                'name' => $property->getName(),
+                'groupColor' => $property->getGroupColor(),
+                'cost' => $property->getCost(),
+                'rent' => $property->getRent(),
+            ];
+        }
+        return $board;
     }
 }
