@@ -3,8 +3,9 @@
 namespace App\Classes;
 
 use App\Config\Config;
+use App\Interfaces\IBank;
 
-class Bank {
+class Bank implements IBank {
 
     public $cash;
     public $houses;

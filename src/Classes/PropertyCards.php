@@ -2,7 +2,9 @@
 
 namespace App\Classes;
 
-class PropertyCards
+use App\Interfaces\IPropertyCards;
+
+class PropertyCards implements  IPropertyCards
 {
     protected string $owner;
     private string $name;
@@ -172,5 +174,13 @@ class PropertyCards
         if ($this->numberHotels > 0) {
             $this->numberHotels--;
         }
+    }
+
+    /**
+     * Check Hotel
+     */
+    public function canBuildHotel(): bool
+    {
+        return $this->numberHouses >= 3;
     }
 }

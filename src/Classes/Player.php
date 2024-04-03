@@ -2,7 +2,9 @@
 
 namespace App\Classes;
 
-class Player {
+use App\Interfaces\IPlayer;
+
+class Player implements IPlayer {
     protected string $name;
     protected int $money;
     protected array $properties;

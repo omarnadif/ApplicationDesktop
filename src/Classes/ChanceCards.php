@@ -2,7 +2,9 @@
 
 namespace App\Classes;
 
-class ChanceCards
+use App\Interfaces\IChanceCards;
+
+class ChanceCards implements IChanceCards
 {
     protected string $type;
     protected string $message;

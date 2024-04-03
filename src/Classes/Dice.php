@@ -2,9 +2,11 @@
 
 namespace App\Classes;
 
-use App\Interfaces\InterfaceDice;
 
-class Dice implements InterfaceDice
+
+use App\Interfaces\IDice;
+
+class Dice implements IDice
 {
 
     private int $nbFace;
